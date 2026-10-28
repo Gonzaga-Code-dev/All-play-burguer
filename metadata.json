@@ -1,0 +1,6 @@
+{
+  "name": "All Play Burguer São Mateus",
+  "description": "Hamburgueria temática de videogame em São Paulo com videogame em todas as mesas, parque de trampolim, rodízio de mini burguer e pizzas.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

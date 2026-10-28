@@ -1,0 +1,149 @@
+{
+  "phases": [
+    {
+      "id": "rodizio",
+      "number": "01",
+      "title": "Rodízio Gamer",
+      "subtitle": "Mini burgers artesanais + pizzas + entradas à vontade",
+      "tagline": "A experiência definitiva da All Play",
+      "description": "Rodízio servido todos os dias das 12h às 23h. Mini hambúrgueres montados na hora, fatias de pizzas crocantes e rodadas de porções servidas quentinhas na mesa.",
+      "vipDifference": "O VIP inclui todas as entradas do Classic + mini bolinho de carne artesanal e as famosas batatas carinhas crocantes, além de prioridade de corte.",
+      "categories": [
+        {
+          "name": "Entradas Classic (Inclusas em ambos)",
+          "items": [
+            { "name": "Batata Frita Tradicional", "description": "Fritas sequinhas e crocantes com toque de sal grosso defumado.", "isVipOnly": false },
+            { "name": "Fritas com Cheddar & Bacon", "description": "Cobertura cremosa de cheddar melt e farofa de bacon crocante artesanal.", "isVipOnly": false },
+            { "name": "Fritas Catupiry & Alho Frito", "description": "Requeijão cremoso tipo catupiry com lâminas de alho dourado.", "isVipOnly": false },
+            { "name": "Onion Rings Crocantes", "description": "Anéis de cebola empanados e dourados com molho barbecue especial.", "isVipOnly": false },
+            { "name": "Mini Coxinha de Frango", "description": "Massa artesanal macia com recheio suculento de peito de frango desfiado.", "isVipOnly": false },
+            { "name": "Mini Bolinha de Queijo", "description": "Empanadas na farinha panko, derretendo por dentro a cada mordida.", "isVipOnly": false }
+          ]
+        },
+        {
+          "name": "Entradas Exclusivas VIP 👑",
+          "items": [
+            { "name": "Mini Bolinho de Carne Artesanal", "description": "Blend especial de carnes nobres com tempero secreto da casa.", "isVipOnly": true },
+            { "name": "Batata Carinha Crocante", "description": "As lendárias batatinhas com rostinho nostálgico, fritas na hora com textura irresistível.", "isVipOnly": true }
+          ]
+        },
+        {
+          "name": "Mini Burgers (Classic e VIP)",
+          "items": [
+            { "name": "Mini Bacon Burguer", "description": "Pão brioche, burger artesanal, queijo prato derretido e tiras crocantes de bacon.", "isVipOnly": false },
+            { "name": "Mini Cheddar Bacon", "description": "Burger artesanal grelhado na brasa, creme de cheddar e cubos de bacon.", "isVipOnly": false },
+            { "name": "Mini Super Cheddar", "description": "Dose dupla de queijo cheddar cremoso com cebola caramelizada.", "isVipOnly": false },
+            { "name": "Mini Monster Burguer", "description": "Hambúrguer suculento, molho especial do chef, alface, queijo e cebola roxa.", "isVipOnly": false },
+            { "name": "Mini Salad Burguer", "description": "Blend artesanal, queijo derretido, alface crespa, tomate e maionese verde.", "isVipOnly": false },
+            { "name": "Mini Chicken Empanado", "description": "Sobrecoxa desossada empanada crocante, alface americana e maionese defumada.", "isVipOnly": false },
+            { "name": "Mini Calabresa", "description": "Patty suculento de calabresa artesanal com queijo derretido e vinagrete.", "isVipOnly": false },
+            { "name": "Mini Vegetariano", "description": "Burger de grão de bico e cogumelos, queijo prato, tomate e rúcula fresca.", "isVipOnly": false },
+            { "name": "Mini Vegano", "description": "Pão vegano, patty vegetal selecionado, alface, tomate e maionese de castanhas.", "isVipOnly": false }
+          ]
+        },
+        {
+          "name": "Pizzas Salgadas (Classic e VIP)",
+          "items": [
+            { "name": "Calabresa Especial", "description": "Calabresa fatiada, cebola roxa em rodelas, azeitonas pretas e orégano fresco.", "isVipOnly": false },
+            { "name": "Mussarela Clássica", "description": "Mussarela derretida em abundância, fatias de tomate maduro e manjericão fresco.", "isVipOnly": false },
+            { "name": "Frango com Catupiry", "description": "Frango desfiado temperado com cobertura farta de requeijão Catupiry original.", "isVipOnly": false },
+            { "name": "Portuguesa Completa", "description": "Presunto cozido, ovos picados, cebola, ervilha fresca e cobertura de mussarela.", "isVipOnly": false },
+            { "name": "Quatro Queijos", "description": "Mussarela, provolone defumado, gorgonzola e requeijão cremoso.", "isVipOnly": false },
+            { "name": "Bauru", "description": "Mussarela, presunto selecionado e fatias generosas de tomate com orégano.", "isVipOnly": false },
+            { "name": "Bacon Crocante", "description": "Mussarela coberta com crocantes cubos de bacon defumado artesanal.", "isVipOnly": false },
+            { "name": "Marguerita Tradicional", "description": "Mussarela, rodelas de tomate, parmesão ralado na hora e folhas de manjericão.", "isVipOnly": false },
+            { "name": "Baiana Especial", "description": "Calabresa moída apimentada, ovos, cebola fatiada e pitada de pimenta calabresa.", "isVipOnly": false },
+            { "name": "Abobrinha com Queijo", "description": "Lâminas de abobrinha temperadas no azeite extra virgem com queijo gratinado.", "isVipOnly": false },
+            { "name": "Milho Verde com Catupiry", "description": "Grãos de milho tenros cobertos com Catupiry e leve camada de mussarela.", "isVipOnly": false },
+            { "name": "À Moda da Casa", "description": "Receita exclusiva da All Play com blend especial de queijos, carnes e ervas.", "isVipOnly": false }
+          ]
+        },
+        {
+          "name": "Pizzas Doces de Sobremesa",
+          "items": [
+            { "name": "Brigadeiro Gourmet com Confetes", "description": "Chocolate cremoso artesanal coberto com granulados e confetes crocantes.", "isVipOnly": false },
+            { "name": "Romeu & Julieta", "description": "Camada suave de queijo derretido com goiabada cascão cremosa.", "isVipOnly": false },
+            { "name": "Banana com Canela", "description": "Bananas fatiadas caramelizadas no forno com açúcar mascavo e canela.", "isVipOnly": false },
+            { "name": "Prestígio", "description": "Ganache de chocolate com flocos crocantes de coco ralado úmido.", "isVipOnly": false }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "burgers-pizzas",
+      "number": "02",
+      "title": "Burgers & Pizzas À La Carte",
+      "subtitle": "Porções individuais e opções completas",
+      "tagline": "Ingredientes premium selecionados",
+      "description": "Se você prefere pedir o seu hambúrguer ou pizza individual favoritos, nosso cardápio à la carte traz receitas caprichadas com muito sabor.",
+      "items": [
+        { "name": "Monster Smash Burger", "category": "Burgers", "price": "R$ 38,90", "description": "2x patties de 100g smash bem crostados, queijo cheddar inglês derretido, cebola chapeada e maionese defumada no pão brioche." },
+        { "name": "Bacon Boss Supreme", "category": "Burgers", "price": "R$ 42,90", "description": "Hambúrguer de 180g na brasa, fatias grossas de bacon artesanal caramelizado, queijo monterey jack e molho barbecue rústico." },
+        { "name": "All Play Triple Level", "category": "Burgers", "price": "R$ 49,90", "description": "3x smash patties de 90g, triplo cheddar, picles artesanais crocantes, cebola roxa picada e molho secreto especial." },
+        { "name": "Chicken Crispy Master", "category": "Burgers", "price": "R$ 36,90", "description": "Peito de frango marinado e empanado na crosta crocante, coleslaw refrescante, picles e maionese de ervas finas." },
+        { "name": "Pizza Grande À Moda (8 fatias)", "category": "Pizzas", "price": "R$ 68,90", "description": "Mussarela especial, presunto magro, bacon crocante, champignon fresco, azeitonas e borda recheada opcional." },
+        { "name": "Pizza Quatro Queijos Premium", "category": "Pizzas", "price": "R$ 64,90", "description": "Mussarela de búfala, gorgonzola legítimo, provolone curado e Catupiry original maçaricado." }
+      ]
+    },
+    {
+      "id": "tacas-sobremesas",
+      "number": "03",
+      "title": "Taças & Sobremesas",
+      "subtitle": "As famosas taças doces e sobremesas generosas",
+      "tagline": "Nível máximo de doçura",
+      "description": "Taças monumentais esculpidas com chocolate nobre, brigadeiro de colher, frutas frescas e os melhores doces.",
+      "items": [
+        { "name": "Taça Kinder Bueno", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Barras inteiras de Kinder Bueno, creme de avelã Nutella, brigadeiro branco, sorvete artesanal de creme e calda escorrendo." },
+        { "name": "Taça Ferrero Rocher", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Bombons Ferrero Rocher crocantes, castanhas tostadas, chocolate belga meio amargo e sorvete cremoso." },
+        { "name": "Taça Oreo Supreme", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Biscoitos Oreo triturados, calda de chocolate fudge, chantilly artesanal aerado e brigadeiro de baunilha." },
+        { "name": "Taça Sedução de Morango", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Morangos frescos selecionados, calda de frutas vermelhas, leite condensado cozido e sorvete de baunilha." },
+        { "name": "Taça Ninho com Nutella", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Brigadeiro cremoso de Leite Ninho, Nutella pura na borda da taça, raspas de chocolate e morango." },
+        { "name": "Taça Francesa", "category": "Taças Gourmet", "price": "R$ 49,90", "description": "Doce de leite argentino cremoso, nozes caramelizadas picadas, sorvete de baunilha e canudos crocantes." },
+        { "name": "Petit Gateau com Sorvete", "category": "Sobremesas", "price": "R$ 29,90", "description": "Bolinho quente de chocolate com recheio cremoso e bola de sorvete de creme com calda quente." },
+        { "name": "Cocada À La Crème", "category": "Sobremesas", "price": "R$ 26,90", "description": "Cocada cremosa de forno servida quente com sorvete de tapioca e canela." },
+        { "name": "Açaí na Barca / Copo", "category": "Sobremesas", "price": "A partir de R$ 22,90", "description": "Açaí puro e cremoso batido na hora com banana, morango, granola, leite em pó e leite condensado." },
+        { "name": "Milk Shake Especial (500ml)", "category": "Sobremesas", "price": "R$ 28,90", "description": "Sabores Nutella, Ovomaltine crocante, Morango silvestre, Paçoca cremosa ou Frutas vermelhas." }
+      ]
+    },
+    {
+      "id": "drinks-bebidas",
+      "number": "04",
+      "title": "Drinks & Bebidas",
+      "subtitle": "Drinks autorais, caipirinhas, refil livre e cervejas trincando",
+      "tagline": "Para brindar cada vitória",
+      "description": "Coquetelaria com frutas tropicais, drinks clássicos com destilados premium e sistema de refil sem limite de refrigerantes e chás.",
+      "items": [
+        { "name": "Charada Gin Tropical", "category": "Coquetéis", "price": "R$ 35,00", "description": "Gin, Tropicanas, abacaxi e hortelã, tônica." },
+        { "name": "Charada Curaçau", "category": "Coquetéis", "price": "R$ 28,00", "description": "Campari, limão, curaçau e abacaxi e hortelã." },
+        { "name": "Piña Colada", "category": "Coquetéis", "price": "R$ 28,00", "description": "Rum, abacaxi, leite de coco e leite condensado." },
+        { "name": "Gin Tônica", "category": "Coquetéis", "price": "R$ 26,00", "description": "Gin Tanqueray, tônica e limão." },
+        { "name": "Caipirinha de Saquê", "category": "Coquetéis", "price": "R$ 25,00", "description": "Saquê com morango e hortelã." },
+        { "name": "Sex on the Beach", "category": "Coquetéis", "price": "R$ 25,00", "description": "Vodka, suco de abacaxi, suco de laranja e groselha." },
+        { "name": "Mojito", "category": "Coquetéis", "price": "R$ 23,00", "description": "Rum, suco de limão, água c/ gás e hortelã." },
+        { "name": "Caipirinha Cachaça", "category": "Coquetéis", "price": "R$ 20,00", "description": "Cachaça com morango, abacaxi e limão." },
+        { "name": "Caipirinha Vodka", "category": "Coquetéis", "price": "R$ 20,00", "description": "Vodka com morango, abacaxi e limão." },
+        { "name": "Refil Livre (Refrigerantes, Chás & Lemonades)", "category": "Não Alcoólicos", "price": "R$ 18,90", "description": "Refrigerantes variados, Chás gelados de pêssego ou limão e Lemonades à vontade." },
+        { "name": "Sucos Naturais da Fruta", "category": "Não Alcoólicos", "price": "A partir de R$ 8,00", "description": "Laranja espremida na hora, limonada suíça, abacaxi ou morango." },
+        { "name": "Cervejas Long Neck", "category": "Cervejas", "price": "A partir de R$ 10,00", "description": "Heineken, Corona, Stella Artois e cervejas especiais trincando de geladas." }
+      ]
+    },
+    {
+      "id": "almoco-piscinao",
+      "number": "05",
+      "title": "Almoço Executivo & Piscinão",
+      "subtitle": "Pratos executivos de segunda a sexta e o épico Piscinão All Play",
+      "tagline": "Comida de verdade, porções de respeito",
+      "description": "Pratos do dia com acompanhamentos caseiros das 12h às 15h, e o colossal Piscinão All Play para compartilhar com a galera.",
+      "items": [
+        { "name": "Piscinão All Play (Para 2 a 3 pessoas)", "category": "Especial Piscinão", "price": "A partir de R$ 49,90 / pessoa", "description": "Super travessa com piscina transbordante de queijo cheddar derretido, montanha de batatas crocantes com bacon e anéis de cebola, acompanhada de mini burgers artesanais." },
+        { "name": "Filé de Frango à Parmegiana", "category": "Almoço Executivo", "price": "R$ 29,90", "description": "Empanado crocante coberto com molho de tomate caseiro e mussarela gratinada, arroz branco e fritas sequinhas." },
+        { "name": "Bife Acebolado Suculento", "category": "Almoço Executivo", "price": "R$ 32,90", "description": "Contrafilé macio chapeado com cebola frita em tiras, servido com arroz, feijão temperadinho e salada." },
+        { "name": "Bisteca Suína na Brasa", "category": "Almoço Executivo", "price": "R$ 28,90", "description": "Bisteca grelhada temperada no limão e ervas, com arroz, feijão, farofa crocante e couve refogada." },
+        { "name": "Hambúrguer Artesanal no Prato", "category": "Almoço Executivo", "price": "R$ 27,90", "description": "Blend artesanal com queijo derretido, ovo estalado com gema mole, arroz soltinho e batata frita." },
+        { "name": "Filé de Frango Grelhado", "category": "Almoço Executivo", "price": "R$ 26,90", "description": "Peito de frango grelhado macio com ervas, acompanhado de arroz integral ou branco, feijão e legumes no vapor." },
+        { "name": "Omelete Completa da Casa", "category": "Almoço Executivo", "price": "R$ 24,90", "description": "Ovos batidos com queijo, presunto, tomate, orégano e cheiro verde, acompanhado de salada verde e arroz." },
+        { "name": "Calabresa Acebolada Chapeada", "category": "Almoço Executivo", "price": "R$ 25,90", "description": "Fatias de calabresa defumada douradas com cebola, arroz fresco, feijão de caldo encorpado e vinagrete." }
+      ]
+    }
+  ]
+}

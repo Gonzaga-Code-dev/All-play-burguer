@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>All Play Burguer São Mateus | Hamburgueria temática de videogame em São Paulo</title>
+    <meta
+      name="description"
+      content="Hamburgueria temática de videogame em São Paulo: videogame em todas as mesas, espaço kids, parque de trampolim no piso superior e rodízio de mini hambúrguer e pizzas. Aqui todos jogam!"
+    />
+    <meta name="theme-color" content="#120B0A" />
+
+    <!-- OpenGraph -->
+    <meta property="og:type" content="restaurant.restaurant" />
+    <meta property="og:title" content="All Play Burguer São Mateus | Hamburgueria temática de videogame em São Paulo" />
+    <meta
+      property="og:description"
+      content="Hamburgueria temática de videogame em São Paulo: videogame em todas as mesas, espaço kids, parque de trampolim no piso superior e rodízio de mini hambúrguer e pizzas."
+    />
+    <meta property="og:site_name" content="All Play Burguer São Mateus" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="All Play Burguer São Mateus | Hamburgueria temática de videogame em São Paulo" />
+    <meta
+      name="twitter:description"
+      content="Hamburgueria temática de videogame em São Paulo: videogame em todas as mesas, parque de trampolim e rodízio de mini burgers."
+    />
+
+    <!-- Google Fonts: Bebas Neue, Outfit, Press Start 2P, Silkscreen, Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Schema.org Restaurant & Menu JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Restaurant",
+      "name": "All Play Burguer São Mateus",
+      "image": "/src/assets/images/hero_burger_cinematic_1793146783399.jpg",
+      "slogan": "Aqui todos jogam!",
+      "description": "Hamburgueria temática de videogame em São Paulo com videogame em todas as mesas, espaço kids, parque de trampolim no piso superior e rodízio completo de mini hambúrgueres e pizzas.",
+      "telephone": "+55-11-2367-7806",
+      "priceRange": "$$",
+      "servesCuisine": ["Burgers", "Pizza", "Fast Food", "Sobremesas"],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. Satélite, 145",
+        "addressLocality": "São Paulo",
+        "addressRegion": "SP",
+        "postalCode": "08330-480",
+        "addressCountry": "BR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": -23.5985,
+        "longitude": -46.4862
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "12:00",
+          "closes": "23:00"
+        }
+      ],
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.4",
+        "reviewCount": "3200",
+        "bestRating": "5"
+      },
+      "amenityFeature": [
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Videogame em todas as mesas",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Parque de trampolim no piso superior",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Espaço Kids",
+          "value": true
+        },
+        {
+          "@type": "LocationFeatureSpecification",
+          "name": "Espaço privativo para eventos",
+          "value": true
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-[#120B0A] text-[#F5EEFF] antialiased selection:bg-[#E8541C] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-dark: #120B0A;
+    --flame: #E8541C;
+    --caramel: #C98A3D;
+    --neon-cyan: #2FE0E6;
+    --neon-pink: #FF2E93;
+    --neon-purple: #8A3FFC;
+    --neon-green: #39FF88;
+  }
+
+  body {
+    background-color: #120B0A;
+    color: #F5EEFF;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+  }
+}
+
+.font-display {
+  font-family: 'Bebas Neue', sans-serif;
+  letter-spacing: 0.04em;
+}
+
+.font-arcade {
+  font-family: 'Silkscreen', 'Press Start 2P', monospace;
+  letter-spacing: 0.08em;
+}
+
+.font-sans-pro {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+/* Gamer cut corner styling (chamfered / pixel cut) */
+.gamer-card {
+  clip-path: polygon(
+    0 12px,
+    12px 0,
+    calc(100% - 12px) 0,
+    100% 12px,
+    100% calc(100% - 12px),
+    calc(100% - 12px) 100%,
+    12px 100%,
+    0 calc(100% - 12px)
+  );
+}
+
+.gamer-button {
+  clip-path: polygon(
+    0 8px,
+    8px 0,
+    calc(100% - 8px) 0,
+    100% 8px,
+    100% calc(100% - 8px),
+    calc(100% - 8px) 100%,
+    8px 100%,
+    0 calc(100% - 8px)
+  );
+}
+
+/* Subtle arcade grid and glow utilities */
+.glow-flame {
+  box-shadow: 0 0 25px rgba(232, 84, 28, 0.45);
+}
+
+.glow-cyan {
+  box-shadow: 0 0 25px rgba(47, 224, 230, 0.4);
+}
+
+.glow-pink {
+  box-shadow: 0 0 25px rgba(255, 46, 147, 0.4);
+}
+
+.glow-caramel {
+  box-shadow: 0 0 25px rgba(201, 138, 61, 0.4);
+}
+
+/* Scanline and dark CRT backdrop overlay */
+.arcade-grid-bg {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+                    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Pixel art rendering and retro arcade grid */
+.pixel-art-screen {
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -webkit-crisp-edges;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
+}
+
+.pixel-grid-pattern {
+  background-size: 8px 8px;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.35) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 1px, transparent 1px);
+}
+
+.pixel-crt-scanline {
+  background: linear-gradient(
+    rgba(18, 16, 16, 0) 50%, 
+    rgba(0, 0, 0, 0.4) 50%
+  );
+  background-size: 100% 4px;
+}
+
+/* Hide scrollbar for clean horizontal scrolls */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
