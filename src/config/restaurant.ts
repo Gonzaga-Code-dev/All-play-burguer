@@ -33,17 +33,12 @@ export interface RestaurantConfig {
       count: string;
       url: string;
     };
-    ifood: {
-      score: number;
-      url: string;
-    };
   };
   social: {
     instagram: string;
     instagramUrl: string;
     facebook: string;
     facebookUrl: string;
-    ifoodUrl: string;
     keetaUrl: string;
     googleMapsUrl: string;
     wazeUrl: string;
@@ -104,10 +99,6 @@ export const RESTAURANT_CONFIG: RestaurantConfig = {
       score: 4.4,
       count: "mais de 3.200 avaliações",
       url: "https://www.google.com/maps/place/All+Play+Burguer/@-23.5985,-46.4862,17z"
-    },
-    ifood: {
-      score: 4.8,
-      url: "https://www.ifood.com.br"
     }
   },
   social: {
@@ -115,7 +106,6 @@ export const RESTAURANT_CONFIG: RestaurantConfig = {
     instagramUrl: "https://www.instagram.com/allplay_saomateus",
     facebook: "All Play Burguer São Mateus",
     facebookUrl: "https://www.facebook.com",
-    ifoodUrl: "https://www.ifood.com.br",
     keetaUrl: "https://fooddelivery-eu.mykeeta.com/mpweb/shop_golden?useShopPoi=1&channel=googlemap&shopId=159486843&cityId=102302389&lch=default%7E*googlemap%7E*BR%7E*159486843&locale=pt-BR&region=BR&utm_source=organic&utm_medium=others&utm_campaign=googlemap",
     googleMapsUrl: "https://maps.google.com/?q=Av.+Sat%C3%A9lite,+145+-+S%C3%A3o+Mateus,+S%C3%A3o+Paulo+-+SP,+08330-480",
     wazeUrl: "https://waze.com/ul?q=Av.+Sat%C3%A9lite,+145+-+S%C3%A3o+Mateus"

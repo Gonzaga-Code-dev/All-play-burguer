@@ -24,7 +24,7 @@ const BURGER_REAL_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026
 const MINI_BURGERS_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_16_36_4a0c27a6.png';
 const COCKTAIL_MENU_IMAGE = '/assets/aistudio/image_874fdc36.png';
 const LOADED_FRIES_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_46_53_201d1ffb.png';
-const COMBO_BOX_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_49_10_c1444da9.png';
+const LUNCH_IMAGE = '/assets/almoco-executivo.png';
 
 interface OrderItem {
   name: string;
@@ -467,6 +467,27 @@ export const AnimatedMenuSection: React.FC = () => {
               </div>
             )}
 
+            {currentPhase.id === 'almoco-piscinao' && (
+              <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-5 sm:p-7 rounded-3xl bg-gradient-to-r from-[#21170A] via-[#1A1209] to-[#120B0A] border border-[#FFD23F]/35 shadow-2xl items-center overflow-hidden">
+                <div className="md:col-span-6 rounded-2xl overflow-hidden border border-stone-800 shadow-xl">
+                  <img
+                    src={LUNCH_IMAGE}
+                    alt="Prato de almoço executivo com bife acebolado, arroz, feijão, batata frita e salada"
+                    className="w-full h-64 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
+                <div className="md:col-span-6 space-y-3">
+                  <span className="font-arcade text-[10px] text-[#FFD23F] uppercase tracking-wider">
+                    FASE 05 · ALMOÇO EXECUTIVO
+                  </span>
+                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                    PAUSA PRA<br /><span className="text-[#E8541C]">RECARREGAR.</span>
+                  </h3>
+                  <p className="text-sm text-stone-300">{RESTAURANT_CONFIG.schedule.lunchTime}</p>
+                </div>
+              </div>
+            )}
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {currentPhase.items &&
                 currentPhase.items
@@ -516,56 +537,6 @@ export const AnimatedMenuSection: React.FC = () => {
             </div>
           </div>
         )}
-
-        {/* Delivery Box Spotlight: Box All Play para Compartilhar */}
-        <div className="mt-14 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#21170A] via-[#1A1209] to-[#120B0A] border-2 border-[#FFD23F]/40 shadow-2xl grid grid-cols-1 md:grid-cols-12 gap-8 items-center overflow-hidden">
-          <div className="md:col-span-6 relative rounded-2xl overflow-hidden border border-stone-800 group shadow-xl">
-            <img
-              src={COMBO_BOX_IMAGE}
-              alt="Mega Box All Play com mini burgers artesanais e batatas com cheddar e bacon"
-              referrerPolicy="no-referrer"
-              className="w-full h-64 sm:h-80 object-cover group-hover:scale-105 transition-transform duration-500"
-            />
-            <div className="absolute top-3 left-3">
-              <span className="font-arcade text-[9px] text-[#FFD23F] px-2.5 py-1 rounded bg-black/85 border border-[#FFD23F]/50 uppercase backdrop-blur-sm">
-                ★ BOX DELIVERY PARA A GALERA
-              </span>
-            </div>
-          </div>
-
-          <div className="md:col-span-6 space-y-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded bg-[#FFD23F]/15 border border-[#FFD23F]/30 text-[#FFD23F] font-arcade text-xs uppercase">
-              PEÇA NO KEETA & IFOOD
-            </div>
-            <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
-              A EXPERIÊNCIA ALL PLAY NA SUA CASA
-            </h3>
-            <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
-              Caixa recheada com dezenas de mini burgers artesanais prensados na chapa com cheddar derretido e bandejas generosas de batatas e onion rings com muito bacon!
-            </p>
-
-            <div className="pt-2 flex flex-wrap items-center gap-3">
-              <a
-                href={RESTAURANT_CONFIG.social.keetaUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-[#FFD23F] hover:bg-[#ffc91a] text-black font-bold text-xs uppercase tracking-wider rounded gamer-button shadow-lg shadow-[#FFD23F]/25 transition-transform active:scale-95"
-              >
-                <ShoppingBag className="w-4 h-4" />
-                <span>Pedir pelo Keeta</span>
-              </a>
-
-              <a
-                href={RESTAURANT_CONFIG.social.ifoodUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-5 py-3.5 bg-[#170E24] hover:bg-stone-800 text-stone-200 font-bold text-xs uppercase tracking-wider rounded gamer-button border border-stone-700 transition-colors"
-              >
-                <span>Pedir no iFood</span>
-              </a>
-            </div>
-          </div>
-        </div>
 
         {/* Phase Footer CTAs: WhatsApp & Delivery */}
         <div className="mt-8 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#170E24] via-[#120B0A] to-[#170E24] border border-stone-800 flex flex-col sm:flex-row items-center justify-between gap-6 text-center sm:text-left">
@@ -657,15 +628,6 @@ export const AnimatedMenuSection: React.FC = () => {
                 <span>Enviar Pedido pelo WhatsApp</span>
               </button>
 
-              <a
-                href={RESTAURANT_CONFIG.social.ifoodUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                onClick={() => setSelectedItemForOrder(null)}
-                className="w-full flex items-center justify-center gap-2 px-4 py-3 bg-[#1D1412] hover:bg-stone-800 text-stone-200 font-bold text-xs uppercase tracking-wider rounded gamer-button border border-stone-700 transition-colors"
-              >
-                <span>Buscar no Cardápio do iFood</span>
-              </a>
             </div>
           </div>
         </div>

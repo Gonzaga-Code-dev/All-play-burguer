@@ -109,13 +109,13 @@ export const PiscinaoSection: React.FC = () => {
               </a>
 
               <a
-                href={RESTAURANT_CONFIG.social.ifoodUrl}
+                href={RESTAURANT_CONFIG.social.keetaUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#170F0E] hover:bg-stone-800 text-stone-200 font-bold text-xs uppercase tracking-wider rounded gamer-button border border-stone-700 transition-colors"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-[#FFD23F] hover:bg-[#ffc91a] text-black font-bold text-xs uppercase tracking-wider rounded gamer-button border border-[#FFD23F]/60 transition-colors"
               >
-                <ShoppingBag className="w-4 h-4 text-[#E8541C]" />
-                <span>iFood Delivery</span>
+                <ShoppingBag className="w-4 h-4" />
+                <span>Pedir no Keeta</span>
               </a>
             </div>
 

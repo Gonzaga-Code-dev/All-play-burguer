@@ -69,17 +69,9 @@ export const Hero: React.FC = () => {
                 <span>Pedir no Keeta</span>
               </a>
 
-              <a
-                href={RESTAURANT_CONFIG.social.ifoodUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center gap-2.5 px-5 py-3.5 bg-[#1D1412] hover:bg-stone-800 text-stone-200 hover:text-white font-bold text-sm tracking-wider uppercase rounded gamer-button border border-stone-700/80 hover:border-[#E8541C]/50 transition-all"
-              >
-                <span>iFood</span>
-              </a>
             </div>
 
-            {/* Social Proof Badges: Google 4.4 and iFood 4.8 */}
+            {/* Google review score */}
             <div className="flex flex-wrap items-center gap-6 pt-4 border-t border-stone-800/80 text-xs">
               <a
                 href={RESTAURANT_CONFIG.ratings.google.url}
@@ -99,25 +91,6 @@ export const Hero: React.FC = () => {
                 </div>
               </a>
 
-              <span className="hidden sm:inline-block w-px h-8 bg-stone-800" />
-
-              <a
-                href={RESTAURANT_CONFIG.ratings.ifood.url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 group hover:opacity-90 transition-opacity"
-              >
-                <div className="flex items-center text-red-500">
-                  <Star className="w-4 h-4 fill-current" />
-                </div>
-                <div>
-                  <div className="flex items-center gap-1.5 font-bold text-white">
-                    <span className="tabular-nums">{RESTAURANT_CONFIG.ratings.ifood.score.toFixed(1)}</span>
-                    <span className="text-stone-400 font-normal">no iFood</span>
-                  </div>
-                  <span className="text-stone-400 text-[11px] block">Super Restaurante Delivery</span>
-                </div>
-              </a>
             </div>
           </div>
 

@@ -92,16 +92,6 @@ export const Footer: React.FC<FooterProps> = ({ onReplayIntro }) => {
               </a>
 
               <a
-                href={RESTAURANT_CONFIG.social.ifoodUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 hover:text-white transition-colors"
-              >
-                <span className="w-4 h-4 text-center font-bold text-red-500 text-[11px]">iF</span>
-                <span>Pedir no iFood Delivery</span>
-              </a>
-
-              <a
                 href={RESTAURANT_CONFIG.social.googleMapsUrl}
                 target="_blank"
                 rel="noopener noreferrer"

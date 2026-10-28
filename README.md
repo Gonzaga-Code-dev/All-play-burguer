@@ -22,7 +22,7 @@ Neste arquivo você pode alterar:
   - Finais de semana e feriados: Classic e VIP
   - Idades de gratuidade e meia-entrada para crianças
 - **Piscinão All Play:** valores por pessoa e dias de disponibilidade.
-- **Links sociais:** URLs do Instagram, iFood, Google Maps e Waze.
+- **Links sociais:** URLs do Instagram, Keeta, Google Maps e Waze.
 
 ---
 

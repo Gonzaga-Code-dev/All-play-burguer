@@ -24,12 +24,12 @@ export const ReviewsSection: React.FC = () => {
             QUEM VEM, <span className="text-[#E8541C]">RECOMENDA</span>
           </h2>
           <p className="text-stone-300 text-sm sm:text-base mt-2">
-            Notas consolidadas diretamente das plataformas públicas do Google e do iFood.
+            Veja as avaliações públicas da casa no Google.
           </p>
         </div>
 
-        {/* 2 Big Score Cards: Google & iFood */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-10">
+        {/* Google score */}
+        <div className="grid grid-cols-1 gap-8 max-w-2xl mx-auto mb-10">
           
           {/* Google Card */}
           <div className="p-8 rounded-2xl bg-[#170F0E] border border-stone-800 flex flex-col justify-between hover:border-amber-500/50 transition-colors">
@@ -65,43 +65,6 @@ export const ReviewsSection: React.FC = () => {
               className="inline-flex items-center justify-between px-4 py-3 rounded-lg bg-[#120B0A] hover:bg-stone-800 text-xs font-bold text-stone-200 hover:text-white transition-colors"
             >
               <span>Ver todas as avaliações no Google Maps</span>
-              <ExternalLink className="w-4 h-4 text-stone-400" />
-            </a>
-          </div>
-
-          {/* iFood Card */}
-          <div className="p-8 rounded-2xl bg-[#170F0E] border border-stone-800 flex flex-col justify-between hover:border-red-500/50 transition-colors">
-            <div>
-              <div className="flex items-center justify-between mb-4">
-                <span className="font-bold text-sm text-stone-200">iFood Delivery</span>
-                <span className="font-arcade text-[10px] text-red-400 border border-red-500/30 px-2 py-0.5 rounded">
-                  SUPER RESTAURANTE
-                </span>
-              </div>
-
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="font-display text-6xl text-white tabular-nums">
-                  {RESTAURANT_CONFIG.ratings.ifood.score.toFixed(1)}
-                </span>
-                <div className="flex text-red-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </div>
-
-              <p className="text-xs text-stone-400 mb-6">
-                Excelente índice de pontualidade, embalagens térmicas e qualidade na entrega rápida.
-              </p>
-            </div>
-
-            <a
-              href={RESTAURANT_CONFIG.ratings.ifood.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center justify-between px-4 py-3 rounded-lg bg-[#120B0A] hover:bg-stone-800 text-xs font-bold text-stone-200 hover:text-white transition-colors"
-            >
-              <span>Ver cardápio e notas no iFood</span>
               <ExternalLink className="w-4 h-4 text-stone-400" />
             </a>
           </div>
