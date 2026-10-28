@@ -194,9 +194,9 @@ export const AnimatedMenuSection: React.FC = () => {
 
         {/* Search & Phase Subheader Bar */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-[#140F1D]/80 border border-stone-800/90 mb-8 backdrop-blur-md">
-          <div>
+          <div className="min-w-0 flex-1">
             <div className="flex items-center gap-2">
-              <span className="font-arcade text-xs text-[#FF2E93] uppercase">
+              <span className="font-arcade text-xs text-[#FF2E93] uppercase break-words">
                 FASE {currentPhase.number} · {currentPhase.title}
               </span>
             </div>
@@ -204,7 +204,7 @@ export const AnimatedMenuSection: React.FC = () => {
           </div>
 
           {/* Search Input */}
-          <div className="relative w-full md:w-72">
+          <div className="relative w-full md:w-72 md:shrink-0">
             <Search className="w-4 h-4 absolute left-3 top-1/2 -translate-y-1/2 text-stone-400" />
             <input
               type="text"
@@ -346,17 +346,16 @@ export const AnimatedMenuSection: React.FC = () => {
               <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#1E112A] via-[#160E21] to-[#120B19] border-2 border-[#FF2E93]/50 shadow-2xl items-center overflow-hidden">
                 <div className="absolute -top-10 -right-10 w-60 h-60 bg-[#FF2E93]/20 rounded-full blur-3xl pointer-events-none" />
                 
-                <div className="md:col-span-5 rounded-2xl overflow-hidden shadow-2xl">
+                <div className="relative md:col-span-5 min-w-0 rounded-2xl overflow-hidden shadow-2xl bg-black/40 flex items-center justify-center">
                   <img
                     src={DESSERT_TACA_IMAGE}
                     alt="Taça gourmet monumental com chocolates e morangos"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-64 sm:h-72 object-cover rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
+                    className="block w-full h-auto md:w-auto md:h-[420px] md:max-w-full object-contain object-center rounded-2xl"
                   />
                 </div>
 
-                <div className="md:col-span-7 flex flex-col justify-center space-y-3">
-                  <div className="flex items-center gap-2">
+                <div className="md:col-span-7 min-w-0 flex flex-col justify-center space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-arcade text-[10px] text-[#FF2E93] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#FF2E93]/15 border border-[#FF2E93]/30">
                       BOSS FINAL DOS DOCES
                     </span>
@@ -365,10 +364,10 @@ export const AnimatedMenuSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight break-words">
                     AS FAMOSAS TAÇAS GOURMET DA ALL PLAY
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed break-words">
                     Esculpidas com chocolates nobres (Kinder Bueno, Ferrero Rocher, Leite Ninho, Nutella pura e Oreo triturado), acompanhadas de morangos frescos e sorvete artesanal.
                   </p>
 
@@ -390,12 +389,11 @@ export const AnimatedMenuSection: React.FC = () => {
               <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#21110B] via-[#1A0E0A] to-[#120B0A] border-2 border-[#E8541C]/50 shadow-2xl items-center overflow-hidden mb-6">
                 <div className="absolute -top-10 -right-10 w-60 h-60 bg-[#E8541C]/20 rounded-full blur-3xl pointer-events-none" />
                 
-                <div className="md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-stone-800">
+                <div className="relative md:col-span-5 min-w-0 rounded-2xl overflow-hidden shadow-2xl border border-stone-800 bg-black/40 flex items-center justify-center">
                   <img
                     src={BURGER_REAL_IMAGE}
                     alt="Hambúrguer artesanal real da All Play com queijo derretido e pão tostado"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-64 sm:h-72 object-cover rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
+                    className="block w-full h-auto md:w-auto md:h-[420px] md:max-w-full object-contain object-center rounded-2xl"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="font-arcade text-[9px] text-[#39FF88] px-2 py-0.5 rounded bg-black/80 border border-[#39FF88]/40 uppercase backdrop-blur-sm">
@@ -404,8 +402,8 @@ export const AnimatedMenuSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="md:col-span-7 flex flex-col justify-center space-y-3">
-                  <div className="flex items-center gap-2">
+                <div className="md:col-span-7 min-w-0 flex flex-col justify-center space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-arcade text-[10px] text-[#E8541C] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#E8541C]/15 border border-[#E8541C]/30">
                       GRELHADOS NO FOGO
                     </span>
@@ -414,10 +412,10 @@ export const AnimatedMenuSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight break-words">
                     BURGER ARTESANAL ALL PLAY
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed break-words">
                     Carne 100% bovina nobre, queijo cheddar cremoso escorrendo, bacon crocante em pedaços e pão brioche selado na manteiga. Escolha avulso ou saboreie no rodízio!
                   </p>
 
@@ -439,7 +437,7 @@ export const AnimatedMenuSection: React.FC = () => {
               <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0C1B14] via-[#0E171B] to-[#120B0A] border-2 border-[#39FF88]/40 shadow-2xl items-center overflow-hidden mb-6">
                 <div className="absolute -top-10 -right-10 w-60 h-60 bg-[#39FF88]/15 rounded-full blur-3xl pointer-events-none" />
                 
-                <div className="relative md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-[#39FF88]/30 flex items-center justify-center bg-black/40">
+                <div className="relative md:col-span-5 min-w-0 rounded-2xl overflow-hidden shadow-2xl border border-[#39FF88]/30 flex items-center justify-center bg-black/40">
                   <img
                     src={COCKTAIL_MENU_IMAGE}
                     alt="Dois drinks coloridos servidos na All Play Burguer"
@@ -452,8 +450,8 @@ export const AnimatedMenuSection: React.FC = () => {
                   </div>
                 </div>
 
-                <div className="md:col-span-7 flex flex-col justify-center space-y-3">
-                  <div className="flex items-center gap-2">
+                <div className="md:col-span-7 min-w-0 flex flex-col justify-center space-y-3">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="font-arcade text-[10px] text-[#39FF88] uppercase tracking-wider px-2.5 py-0.5 rounded bg-[#39FF88]/15 border border-[#39FF88]/30">
                       COQUETELARIA OFICIAL
                     </span>
@@ -462,10 +460,10 @@ export const AnimatedMenuSection: React.FC = () => {
                     </span>
                   </div>
 
-                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight break-words">
                     CARTA DE DRINKS & COQUETÉIS ILUMINADA
                   </h3>
-                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed">
+                  <p className="text-xs sm:text-sm text-stone-300 leading-relaxed break-words">
                     Caipirinhas de Saquê, Vodka e Cachaça com frutas frescas, clássicos como Mojito, Sex on the Beach, Gin Tônica Tanqueray e os exclusivos Charada Gin Tropical e Charada Curaçau.
                   </p>
 
@@ -490,18 +488,18 @@ export const AnimatedMenuSection: React.FC = () => {
 
             {currentPhase.id === 'almoco-piscinao' && (
               <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-5 sm:p-7 rounded-3xl bg-gradient-to-r from-[#21170A] via-[#1A1209] to-[#120B0A] border border-[#FFD23F]/35 shadow-2xl items-center overflow-hidden">
-                <div className="md:col-span-6 rounded-2xl overflow-hidden border border-stone-800 shadow-xl">
+                <div className="relative md:col-span-5 min-w-0 rounded-2xl overflow-hidden border border-stone-800 shadow-xl bg-black/40 flex items-center justify-center">
                   <img
                     src={LUNCH_IMAGE}
                     alt="Prato de almoço executivo com bife acebolado, arroz, feijão, batata frita e salada"
-                    className="w-full h-64 sm:h-80 object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    className="block w-full h-auto md:w-auto md:h-[420px] md:max-w-full object-contain object-center"
                   />
                 </div>
-                <div className="md:col-span-6 space-y-3">
+                <div className="md:col-span-7 min-w-0 space-y-3">
                   <span className="font-arcade text-[10px] text-[#FFD23F] uppercase tracking-wider">
                     FASE 05 · ALMOÇO EXECUTIVO
                   </span>
-                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                  <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight break-words">
                     PAUSA PRA<br /><span className="text-[#E8541C]">RECARREGAR.</span>
                   </h3>
                   <p className="text-sm text-stone-300">{RESTAURANT_CONFIG.schedule.lunchTime}</p>
