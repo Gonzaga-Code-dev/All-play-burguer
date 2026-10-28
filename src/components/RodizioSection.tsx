@@ -156,12 +156,11 @@ export const RodizioSection: React.FC = () => {
           
           {/* Photos: Mini Burgers Board & Appetizers */}
           <div className="lg:col-span-5 space-y-4">
-            <div className="relative rounded-xl overflow-hidden group border border-stone-800">
+            <div className="relative aspect-[4/5] rounded-xl overflow-hidden group border border-stone-800">
               <img
                 src={MINI_BURGERS_IMAGE}
                 alt="Tábua real com rodízio de mini burgers artesanais coloridos na All Play"
-                referrerPolicy="no-referrer"
-                className="w-full h-56 sm:h-64 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                className="absolute inset-0 w-full h-full object-cover rounded-xl"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-[#120B0A] via-transparent to-transparent" />
               <div className="absolute top-3 left-3">
@@ -180,12 +179,11 @@ export const RodizioSection: React.FC = () => {
             </div>
 
             <div className="grid grid-cols-2 gap-3">
-              <div className="relative rounded-xl overflow-hidden group border border-stone-800">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden group border border-stone-800">
                 <img
                   src={LOADED_FRIES_IMAGE}
                   alt="Batatas especiais com cheddar, bacon e catupiry com alho na mesa gamer"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-36 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#120B0A] via-transparent to-transparent" />
                 <div className="absolute bottom-2 left-2 right-2">
@@ -198,12 +196,11 @@ export const RodizioSection: React.FC = () => {
                 </div>
               </div>
 
-              <div className="relative rounded-xl overflow-hidden group border border-stone-800">
+              <div className="relative aspect-[4/5] rounded-xl overflow-hidden group border border-stone-800">
                 <img
                   src={APPETIZERS_IMAGE}
                   alt="Porção real com onion rings crocantes, batatas fritas e coxinhas na mesa gamer"
-                  referrerPolicy="no-referrer"
-                  className="w-full h-36 object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                  className="absolute inset-0 w-full h-full object-cover rounded-xl"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#120B0A] via-transparent to-transparent" />
                 <div className="absolute bottom-2 left-2 right-2">
