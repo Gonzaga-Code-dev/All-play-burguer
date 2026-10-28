@@ -25,6 +25,7 @@ const MINI_BURGERS_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_202
 const COCKTAIL_MENU_IMAGE = '/assets/drinks-all-play.png';
 const LOADED_FRIES_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_46_53_201d1ffb.png';
 const LUNCH_IMAGE = '/assets/almoco-executivo.png';
+const RODIZIO_GAMER_IMAGE = '/assets/rodizio-gamer.png';
 
 interface OrderItem {
   name: string;
@@ -218,6 +219,27 @@ export const AnimatedMenuSection: React.FC = () => {
         {/* PHASE 01: RODÍZIO CATEGORIES & VIP TOGGLE */}
         {currentPhase.id === 'rodizio' && (
           <div className="space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-12 gap-6 p-5 sm:p-7 rounded-3xl bg-gradient-to-r from-[#10172B] via-[#15101E] to-[#21170A] border border-[#3DA5FF]/35 shadow-2xl items-center overflow-hidden">
+              <div className="md:col-span-5 rounded-2xl overflow-hidden border border-[#3DA5FF]/30 bg-black/40">
+                <img
+                  src={RODIZIO_GAMER_IMAGE}
+                  alt="Controle de videogame All Play em primeiro plano, com porção de salgados ao fundo"
+                  className="block w-full h-auto aspect-square object-contain object-center"
+                />
+              </div>
+              <div className="md:col-span-7 space-y-3">
+                <span className="font-arcade text-[10px] text-[#3DA5FF] uppercase tracking-wider">
+                  FASE 01 · RODÍZIO GAMER
+                </span>
+                <h3 className="font-display text-3xl sm:text-4xl text-white uppercase leading-tight">
+                  MINI BURGERS <span className="text-[#E8541C]">+ PIZZAS</span>
+                </h3>
+                <p className="text-sm text-stone-300">
+                  Escolha seu player e aproveite o rodízio com videogame em todas as mesas.
+                </p>
+              </div>
+            </div>
+
             {/* VIP Glow Toggle Switch */}
             <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between p-4 rounded-xl bg-[#170E24] border border-[#FF2E93]/40 gap-4">
               <div className="flex items-center gap-3">
