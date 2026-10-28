@@ -115,3 +115,24 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+
+@keyframes menu-extra-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.menu-extra-item {
+  animation: menu-extra-reveal 420ms cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .menu-extra-item {
+    animation: none;
+  }
+}

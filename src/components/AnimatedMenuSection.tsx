@@ -3,7 +3,7 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React, { useState, useMemo, useRef } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import { 
   Crown, 
   Search, 
@@ -11,6 +11,7 @@ import {
   ShoppingBag, 
   Sparkles, 
   ChevronRight, 
+  ChevronDown,
   Check, 
   Plus, 
   Flame,
@@ -38,7 +39,8 @@ const TiltCard: React.FC<{
   children: React.ReactNode;
   className?: string;
   highlighted?: boolean;
-}> = ({ children, className = '', highlighted = false }) => {
+  id?: string;
+}> = ({ children, className = '', highlighted = false, id }) => {
   const cardRef = useRef<HTMLDivElement | null>(null);
   const [transform, setTransform] = useState('perspective(1000px) rotateX(0deg) rotateY(0deg)');
 
@@ -63,6 +65,7 @@ const TiltCard: React.FC<{
 
   return (
     <div
+      id={id}
       ref={cardRef}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -86,10 +89,54 @@ export const AnimatedMenuSection: React.FC = () => {
   const [activePhaseIndex, setActivePhaseIndex] = useState<number>(0);
   const [vipFilterActive, setVipFilterActive] = useState<boolean>(true);
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [showAllMenuItems, setShowAllMenuItems] = useState<boolean>(false);
+  const scrollToNewOptionsRef = useRef(false);
   const [selectedItemForOrder, setSelectedItemForOrder] = useState<OrderItem | null>(null);
 
   const phases = menuData.phases;
   const currentPhase = phases[activePhaseIndex];
+  const filteredRodizioCategories = (currentPhase.categories ?? [])
+    .map((category) => ({
+      ...category,
+      items: category.items.filter((item) =>
+        item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+        item.description.toLowerCase().includes(searchQuery.toLowerCase())
+      ),
+    }))
+    .filter((category) => category.items.length > 0);
+  const filteredPhaseItems = (currentPhase.items ?? []).filter((item) =>
+    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    item.description.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+  const totalPhaseItems = currentPhase.id === 'rodizio'
+    ? filteredRodizioCategories.reduce((total, category) => total + category.items.length, 0)
+    : filteredPhaseItems.length;
+  const visibleItemLimit = showAllMenuItems ? totalPhaseItems : Math.min(6, totalPhaseItems);
+  let remainingRodizioItems = visibleItemLimit;
+  let rodizioItemIndex = 0;
+  const visibleRodizioCategories = filteredRodizioCategories
+    .map((category) => {
+      const items = category.items.slice(0, remainingRodizioItems).map((item) => ({
+        item,
+        itemIndex: rodizioItemIndex++,
+      }));
+      remainingRodizioItems -= items.length;
+      return { ...category, totalItems: category.items.length, items };
+    })
+    .filter((category) => category.items.length > 0);
+  const visiblePhaseItems = filteredPhaseItems.slice(0, visibleItemLimit);
+  const hiddenItemCount = totalPhaseItems - visibleItemLimit;
+
+  useEffect(() => {
+    if (!showAllMenuItems || !scrollToNewOptionsRef.current) return;
+    scrollToNewOptionsRef.current = false;
+    window.requestAnimationFrame(() => {
+      document.getElementById('menu-extra-first')?.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center',
+      });
+    });
+  }, [showAllMenuItems]);
 
   // Quick order handler
   const handleOrderClick = (name: string, price: string = 'Consultar', category: string = 'Cardápio') => {
@@ -160,7 +207,11 @@ export const AnimatedMenuSection: React.FC = () => {
               return (
                 <button
                   key={phase.id}
-                  onClick={() => setActivePhaseIndex(idx)}
+                  onClick={() => {
+                    setActivePhaseIndex(idx);
+                    setShowAllMenuItems(false);
+                    setSearchQuery('');
+                  }}
                   className={`group relative flex items-center gap-3 px-4 py-3 rounded-xl border transition-all duration-200 whitespace-nowrap shrink-0 gamer-card ${
                     isActive
                       ? 'bg-[#1A1226] border-[#2FE0E6] text-white shadow-lg shadow-[#2FE0E6]/25 ring-1 ring-[#2FE0E6]'
@@ -210,7 +261,10 @@ export const AnimatedMenuSection: React.FC = () => {
               type="text"
               placeholder="Buscar item no cardápio..."
               value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
+              onChange={(e) => {
+                setSearchQuery(e.target.value);
+                setShowAllMenuItems(false);
+              }}
               className="w-full pl-9 pr-4 py-2 text-xs rounded-lg bg-[#0A0710] border border-stone-800 text-white placeholder-stone-500 focus:outline-none focus:border-[#2FE0E6] transition-colors"
             />
           </div>
@@ -267,16 +321,7 @@ export const AnimatedMenuSection: React.FC = () => {
             </div>
 
             {/* Rodízio Groups */}
-            {currentPhase.categories &&
-              currentPhase.categories.map((cat, catIdx) => {
-                const filteredItems = cat.items.filter((item) =>
-                  item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                  item.description.toLowerCase().includes(searchQuery.toLowerCase())
-                );
-
-                if (filteredItems.length === 0) return null;
-
-                return (
+            {visibleRodizioCategories.map((cat, catIdx) => (
                   <div key={catIdx} className="space-y-4">
                     <div className="flex items-center gap-3 border-b border-stone-800 pb-2">
                       <span className="w-1.5 h-4 bg-[#2FE0E6] rounded" />
@@ -284,20 +329,23 @@ export const AnimatedMenuSection: React.FC = () => {
                         {cat.name}
                       </h3>
                       <span className="font-arcade text-[10px] text-stone-400 ml-auto">
-                        {filteredItems.length} ITENS
+                        {cat.items.length < cat.totalItems
+                          ? `${cat.items.length} DE ${cat.totalItems} ITENS`
+                          : `${cat.totalItems} ITENS`}
                       </span>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                      {filteredItems.map((item, itemIdx) => {
+                      {cat.items.map(({ item, itemIndex }) => {
                         const isVip = item.isVipOnly;
                         const isHighlighted = isVip && vipFilterActive;
 
                         return (
                           <TiltCard
-                            key={itemIdx}
+                            key={itemIndex}
+                            id={itemIndex === 6 ? 'menu-extra-first' : undefined}
                             highlighted={isHighlighted}
-                            className={`p-4 rounded-xl border gamer-card flex flex-col justify-between ${
+                            className={`p-4 rounded-xl border gamer-card flex flex-col justify-between ${itemIndex >= 6 ? 'menu-extra-item' : ''} ${
                               isHighlighted
                                 ? 'bg-[#221326]'
                                 : 'bg-[#140F1D]/70 hover:bg-[#1A1226]'
@@ -333,8 +381,7 @@ export const AnimatedMenuSection: React.FC = () => {
                       })}
                     </div>
                   </div>
-                );
-              })}
+                ))}
           </div>
         )}
 
@@ -508,16 +555,11 @@ export const AnimatedMenuSection: React.FC = () => {
             )}
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {currentPhase.items &&
-                currentPhase.items
-                  .filter((item) =>
-                    item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                    item.description.toLowerCase().includes(searchQuery.toLowerCase())
-                  )
-                  .map((item, idx) => (
+              {visiblePhaseItems.map((item, idx) => (
                     <TiltCard
-                      key={idx}
-                      className="p-5 rounded-xl bg-[#140F1D]/80 border gamer-card flex flex-col justify-between group"
+                      key={`${item.category}-${item.name}`}
+                      id={idx === 6 ? 'menu-extra-first' : undefined}
+                      className={`p-5 rounded-xl bg-[#140F1D]/80 border gamer-card flex flex-col justify-between group ${idx >= 6 ? 'menu-extra-item' : ''}`}
                     >
                       <div>
                         <div className="flex items-start justify-between gap-3 mb-2">
@@ -554,6 +596,27 @@ export const AnimatedMenuSection: React.FC = () => {
                     </TiltCard>
                   ))}
             </div>
+          </div>
+        )}
+
+        {totalPhaseItems > 6 && (
+          <div className="flex justify-center mt-8">
+            <button
+              type="button"
+              aria-expanded={showAllMenuItems}
+              onClick={() => {
+                if (!showAllMenuItems) {
+                  scrollToNewOptionsRef.current = true;
+                  setShowAllMenuItems(true);
+                } else {
+                  setShowAllMenuItems(false);
+                }
+              }}
+              className="inline-flex min-h-11 items-center gap-3 rounded-full border border-[#2FE0E6]/40 bg-[#140F1D] px-6 py-3 text-xs font-bold uppercase tracking-wider text-white transition-all duration-300 hover:border-[#2FE0E6] hover:bg-[#1A1226] hover:shadow-lg hover:shadow-[#2FE0E6]/15"
+            >
+              <span>{showAllMenuItems ? 'Mostrar somente 6 opções' : `Ver mais ${hiddenItemCount} opções`}</span>
+              <ChevronDown className={`h-4 w-4 text-[#2FE0E6] transition-transform duration-300 ${showAllMenuItems ? 'rotate-180' : ''}`} />
+            </button>
           </div>
         )}
 
