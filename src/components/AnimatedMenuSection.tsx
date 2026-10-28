@@ -22,7 +22,7 @@ import { RESTAURANT_CONFIG } from '../config/restaurant.ts';
 const DESSERT_TACA_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_11_28_625f5df5.png';
 const BURGER_REAL_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__21_57_38_51163689.png';
 const MINI_BURGERS_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_16_36_4a0c27a6.png';
-const COCKTAIL_MENU_IMAGE = '/assets/aistudio/image_874fdc36.png';
+const COCKTAIL_MENU_IMAGE = '/assets/drinks-all-play.png';
 const LOADED_FRIES_IMAGE = '/assets/aistudio/Imagem_do_ChatGPT_27_de_out._de_2026__22_46_53_201d1ffb.png';
 const LUNCH_IMAGE = '/assets/almoco-executivo.png';
 
@@ -420,13 +420,13 @@ export const AnimatedMenuSection: React.FC = () => {
                 <div className="md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-[#39FF88]/30 max-h-80 flex items-center justify-center bg-black">
                   <img
                     src={COCKTAIL_MENU_IMAGE}
-                    alt="Carta oficial de coquetéis com iluminação neon da All Play Burguer"
+                    alt="Dois drinks coloridos servidos na All Play Burguer"
                     referrerPolicy="no-referrer"
                     className="w-full h-80 object-cover object-top rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="font-arcade text-[9px] text-[#39FF88] px-2 py-0.5 rounded bg-black/85 border border-[#39FF88]/50 uppercase backdrop-blur-sm">
-                      ★ CARTA REAL DE COQUETÉIS
+                      ★ DRINKS ALL PLAY
                     </span>
                   </div>
                 </div>
