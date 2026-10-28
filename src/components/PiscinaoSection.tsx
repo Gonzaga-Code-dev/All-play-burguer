@@ -7,7 +7,7 @@ import React from 'react';
 import { Flame, MessageCircle, ShoppingBag, Users, Calendar } from 'lucide-react';
 import { RESTAURANT_CONFIG } from '../config/restaurant.ts';
 
-const PISCINAO_IMAGE = '/src/assets/images/piscinao_all_play_1793146785902.jpg';
+const PISCINAO_IMAGE = '/assets/piscinao-all-play.png';
 
 export const PiscinaoSection: React.FC = () => {
   const whatsappUrl = `https://wa.me/${RESTAURANT_CONFIG.whatsapp}?text=${encodeURIComponent(
@@ -48,7 +48,7 @@ export const PiscinaoSection: React.FC = () => {
             <div className="relative rounded-2xl overflow-hidden border border-stone-700/80">
               <img
                 src={PISCINAO_IMAGE}
-                alt="Piscinão All Play com cascata de queijo cheddar, batatas fritas crocantes com bacon e hambúrgueres"
+                alt="Travessa do Piscinão All Play com mini hambúrgueres e batatas fritas com cheddar e bacon"
                 referrerPolicy="no-referrer"
                 className="w-full h-80 sm:h-96 md:h-[420px] object-cover group-hover:scale-105 transition-transform duration-700"
               />
