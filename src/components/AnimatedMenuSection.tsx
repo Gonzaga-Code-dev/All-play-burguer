@@ -417,12 +417,11 @@ export const AnimatedMenuSection: React.FC = () => {
               <div className="relative group grid grid-cols-1 md:grid-cols-12 gap-6 p-6 sm:p-8 rounded-3xl bg-gradient-to-r from-[#0C1B14] via-[#0E171B] to-[#120B0A] border-2 border-[#39FF88]/40 shadow-2xl items-center overflow-hidden mb-6">
                 <div className="absolute -top-10 -right-10 w-60 h-60 bg-[#39FF88]/15 rounded-full blur-3xl pointer-events-none" />
                 
-                <div className="md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-[#39FF88]/30 max-h-80 flex items-center justify-center bg-black">
+                <div className="relative md:col-span-5 rounded-2xl overflow-hidden shadow-2xl border border-[#39FF88]/30 flex items-center justify-center bg-black/40">
                   <img
                     src={COCKTAIL_MENU_IMAGE}
                     alt="Dois drinks coloridos servidos na All Play Burguer"
-                    referrerPolicy="no-referrer"
-                    className="w-full h-80 object-cover object-top rounded-2xl transform transition-transform duration-500 group-hover:scale-105"
+                    className="block w-full h-auto md:w-auto md:h-[420px] md:max-w-full object-contain object-center rounded-2xl"
                   />
                   <div className="absolute top-3 left-3">
                     <span className="font-arcade text-[9px] text-[#39FF88] px-2 py-0.5 rounded bg-black/85 border border-[#39FF88]/50 uppercase backdrop-blur-sm">
